@@ -238,7 +238,7 @@ class Coordinator():
 
     # rocket_type values: -hv, -i or empty for simple rocket sight
     def run_sub_script(rocket_type_arg):
-        scr_f_name = Coordinator.get_script_fullname('hvrsight')
+        scr_f_name = Coordinator.get_script_fullname('scale')
         proc = subprocess.Popen(['python', scr_f_name, rocket_type_arg.value], shell=True)
         Coordinator.active_proc_id = proc.pid
 
