@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from ProjectStructures import Localization
+from projectStructures import Localization
 
 class Ui_MainWindow(object):
 
@@ -135,10 +135,10 @@ class Ui_MainWindow(object):
         self.label_contact_info.setText(_translate("MainWindow", "{cotact_info}"))
 
 
-class MainWindow(QtWidgets.QMainWindow):
+class RSAppWindow(QtWidgets.QMainWindow):
 
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(RSAppWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.comboBox_lang.activated[int].connect(self.onLangChanged)
@@ -146,12 +146,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def refreshLocalization(self):
         self.ui.groupBox_hotkeys_info.setTitle(Localization.get_text("hotkeys_info"))
-        self.ui.label_hide.setText("NUMPAD 0 - " + Localization.get_text("hide_sight"))
-        self.ui.label_sh_hvr.setText("NUMPAD 1 - " + Localization.get_text("show_high_velocity_rocketsight"))
-        self.ui.label_sh_inr.setText("NUMPAD 2 - " + Localization.get_text("show_incedinary_rocketsight"))
-        self.ui.label_sh_sr.setText("NUMPAD 3 - " + Localization.get_text("show_simple_rocketsight"))
-        self.ui.label_ch_color.setText("NUMPAD 4 - " + Localization.get_text("change_color"))
-        self.ui.label_minimize.setText("NUMPAD 5 - " + Localization.get_text("minimize_rust_window"))
+        self.ui.label_hide.setText(f'NUMPAD 0 - {Localization.get_text("hide_sight")}')
+        self.ui.label_sh_hvr.setText(f'NUMPAD 1 - {Localization.get_text("show_high_velocity_rocketsight")}')
+        self.ui.label_sh_inr.setText(f'NUMPAD 2 - {Localization.get_text("show_incedinary_rocketsight")}')
+        self.ui.label_sh_sr.setText(f'NUMPAD 3 - {Localization.get_text("show_simple_rocketsight")}')
+        self.ui.label_ch_color.setText(f'NUMPAD 4 - {Localization.get_text("change_color")}')
+        self.ui.label_minimize.setText(f'NUMPAD 5 - {Localization.get_text("minimize_rust_window")}')
         self.ui.label_warning.setText(Localization.get_text("only_for_fixed_resolution"))
         self.ui.label_contact_info.setText(Localization.get_text("cotact_info"))
 

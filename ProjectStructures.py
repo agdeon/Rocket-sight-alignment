@@ -1,7 +1,5 @@
-from enum import Enum
 
-
-class NumKeys(str, Enum):
+class NumKeys:
     NUM0 = '<96>'
     NUM1 = '<97>'
     NUM2 = '<98>'
@@ -10,16 +8,22 @@ class NumKeys(str, Enum):
     NUM5 = '<101>'
 
 
-class RocketTypeArg(str, Enum):
+class RocketTypeArg:
     HV = '-hvr'  # High velocity rocket
     INC = '-ir'  # Incendiary rocket
     EXP = '-er'  # Explosive rocket
 
 
-class Language(int, Enum):
+class Language:
     ENG = 0
     RU = 1
     UA = 2
+
+
+class ColorScheme:
+    DEFAULT = 1
+    DARK = 2
+    LIGHT = 3
 
 
 class Localization:
