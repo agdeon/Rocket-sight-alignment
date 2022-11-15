@@ -1,3 +1,0 @@
-[child] My id is: 2608 My parent is: 8440
-[child] My id is: 4296 My parent is: 
-[child] My id is: 3880 My parent is: 9084
