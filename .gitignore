@@ -1,1 +1,5 @@
 /testcode
+/build
+/__pycache__
+/.idea
+/venv
