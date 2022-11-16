@@ -1,5 +1,4 @@
-import sys
-import time
+
 import PySimpleGUI as sg
 import win32gui
 from projectStructures import ColorScheme, RocketTypeArg
@@ -127,7 +126,7 @@ class RocketSight:
 
     def set_focus_onrust(self):
         whnd = win32gui.FindWindowEx(None, None, None, 'Rust')
-        if not whnd:
+        if not whnd or win32gui.GetWindowText(whnd) != 'Rust':
             return
         win32gui.SetForegroundWindow(whnd)
 
