@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets
 from appUI import RSAppWindow
 from projectStructures import NumKeys, RocketTypeArg
 from rsdisplay import RocketSight
+import multiprocessing
 
 # Main process coordinator
 class Coordinator():
@@ -102,4 +103,5 @@ def main():
     coordinator.display_main_window()
 
 if __name__ == '__main__':
+    multiprocessing.freeze_support()
     main()

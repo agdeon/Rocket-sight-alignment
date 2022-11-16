@@ -149,6 +149,7 @@ class RocketSight:
 
 # для прямого теста
 if __name__ == '__main__':
+    multiprocessing.freeze_support()
     RocketSight.run_subprocess(RocketTypeArg.EXP)
 
 
